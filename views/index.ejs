@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Node App</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <% if(!isAuthenticated) { %>
+                <li><a href="/login/">Login</a></li>
+            <% } else { %>
+                <li><a href="/user-managment/">User Managment</a></li>
+                <li><a href="/logout/">Logout</a></li>
+            <% } %>
+        </ul>
+    </nav>
+
+    <h1>Simple Node App</h1>
+    
+</body>
+</html>

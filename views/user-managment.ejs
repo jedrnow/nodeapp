@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Managment</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input type="checkbox" id="selectall"></td>
+            <td>User ID</td>
+            <td>Username</td>
+            <td>Email</td>
+            <td>Register date</td>
+            <td>Last login</td>
+            <td>Is blocked?</td>
+        </tr>
+        <% for(var i=0; i < userList.length; i++) { %>
+           <tr>
+            <td><input type="checkbox" id="${i}"></td>
+             <td><%= userList[i].user_id %></td>
+             <td><%= userList[i].name %></td>
+             <td><%= userList[i].email %></td>
+             <td><%= userList[i].created_at %></td>
+             <td><%= userList[i].last_login %></td>
+             <td><%= userList[i].blocked!=false ? 'unblocked' : 'blocked' %></td>
+           </tr>
+        <% } %>
+        </table>
+    
+</body>
+</html>
