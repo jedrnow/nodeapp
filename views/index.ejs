@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Node App</title>
+    <link rel="stylesheet" href="/public/style/index.css" />
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
 </head>
 <body>
     <nav>
         <ul>
             <% if(!isAuthenticated) { %>
-                <li><a href="/login/">Login</a></li>
+                <li><b><a class="links" href="/login/">Login</a></b></li>
             <% } else { %>
-                <li><a href="/user-managment/">User Managment</a></li>
-                <li><a href="/logout/">Logout</a></li>
+                <li><b><a class="links" href="/user-managment/">User Managment</a></li>
+                <li><b><a class="links" href="/logout/">Logout</a></b></li>
             <% } %>
         </ul>
     </nav>
 
     <h1>Simple Node App</h1>
+    
     
 </body>
 </html>

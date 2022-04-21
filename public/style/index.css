@@ -1,0 +1,25 @@
+body{
+    background-color: aliceblue;
+    font-family: 'Advent Pro';
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Advent Pro';
+}
+
+nav{
+    font-family: 'Advent Pro';
+    font-size:25px;
+    text-align: left;
+    margin:-10px;
+    margin-top: -15px;
+    background-color:rgb(218, 235, 250);
+    border: 1px solid white;
+}
+
+li{
+    list-style-type: none;
+    margin-bottom: 5px;
+}

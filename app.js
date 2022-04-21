@@ -11,6 +11,9 @@ app.set("view engine", "ejs");
 app.use(express.json());
 
 const { auth, requiresAuth } = require('express-openid-connect');
+
+app.use(express.static(__dirname));
+
 app.use(
   auth({
     authRequired: false,

@@ -1,11 +1,13 @@
 {
   "dependencies": {
     "axios": "^0.26.1",
+    "bootstrap-icons": "^1.8.1",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "express-openid-connect": "^2.7.2",
     "mongodb": "^4.5.0",
-    "openid-connect": "^1.2.4"
+    "openid-connect": "^1.2.4",
+    "type": "module"
   }
 }

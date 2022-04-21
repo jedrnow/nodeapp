@@ -1,0 +1,36 @@
+body{
+    background-color: aliceblue;
+    font-family: 'Advent Pro';
+}
+.topnav{
+    text-align: left;
+    margin: 10px;
+    margin-left: -10px;
+    margin-top: -15px;
+    margin-right: -10px;
+    background-color:rgb(218, 235, 250);
+    border: 1px solid white;
+}
+.header{
+    font-size:30px;
+}
+#table{
+    font-size: 20px;
+}
+
+#blockb{
+    background-color:red;
+    font-size:30px;
+    margin: 20px;
+    margin-left: 50px;
+}
+#unblock{
+    font-size: 30px;
+    margin: 20px;
+    margin-left: 200px;
+}
+#delete{
+    font-size: 30px;
+    margin: 20px;
+    margin-left: 200px;
+}

@@ -5,21 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Managment</title>
+    <script src="https://kit.fontawesome.com/d0e39ee3c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/style/user-managment.css" />
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
 </head>
 <body>
-    <table>
+    <script language="JavaScript">
+        function toggle(source) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i] != source)
+                    checkboxes[i].checked = source.checked;
+            }
+        }
+    </script>
+    <div class="topnav" id="nav">
+        <button id="blockb">Block</button>
+        <i id="unblock" class="fa-solid fa-unlock"></i>
+        <i id="delete" class="fa-solid fa-trash"></i>
+    </div>
+    <table id="table">
         <tr>
-            <td><input type="checkbox" id="selectall"></td>
-            <td>User ID</td>
-            <td>Username</td>
-            <td>Email</td>
-            <td>Register date</td>
-            <td>Last login</td>
-            <td>Is blocked?</td>
+            <td><input type="checkbox" onClick=toggle(this) id="selectall"></td>
+            <td><b class="header">User ID</b></td>
+            <td><b class="header">Username</b></td>
+            <td><b class="header">Email</b></td>
+            <td><b class="header">Register date</b></td>
+            <td><b class="header">Last login</b></td>
+            <td><b class="header">Is blocked?</b></td>
         </tr>
         <% for(var i=0; i < userList.length; i++) { %>
            <tr>
-            <td><input type="checkbox" id="${i}"></td>
+            <td><input type="checkbox" name="foo" id=<%- userList[i].user_id %>></td>
              <td><%= userList[i].user_id %></td>
              <td><%= userList[i].name %></td>
              <td><%= userList[i].email %></td>
@@ -29,6 +46,6 @@
            </tr>
         <% } %>
         </table>
-    
+
 </body>
 </html>
